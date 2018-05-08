@@ -1,0 +1,197 @@
+body {
+    min-width: 940px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.header {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 740px;
+    background: url('/image/noise.png');
+    float: left;
+}
+
+.form .request {
+    padding: 20px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.form .general {
+    padding: 10px;
+}
+
+.form .general input[type="text"],
+.general input[type="email"] {
+    width: 330px;
+    height: 25px;
+    border: none;
+    box-shadow: inset 0.5px 0.5px 3px 0 #333333;
+    font-size: 18px;    
+}
+
+.form .general label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.form .check {
+    display: inline-block;
+    width: 370px;
+}
+
+.form .empty {
+    display: inline-block;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.form .block {
+    width: 350px;
+    background: #FFD9DD;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form .block:after {
+    content: '';
+    display: block;
+    width: 344px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    background: #333333;
+    border-radius: 50%;
+    box-shadow: 0 1px 5px 0 #333333;
+    z-index: -1;
+}
+
+.form .block .description {
+    padding: 10px;
+}
+
+.form .general select {
+    border-radius: 3px;
+}
+
+.form .not-fly {
+    background: #FBFFDE;
+    font-size: 15px;
+}
+
+.form .sex {
+    display: inline-block;
+    padding: 10px;
+}
+
+.form .sex ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.form .radio-button li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.form .radio-button input {
+    display: none;
+}
+
+.form .radio-button label {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+    border: 0.5px solid #BBBBBB;
+    padding: 7px;
+    margin: -2px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.form .radio-button li:first-child label {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.form .radio-button li:last-child label {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.form .radio-button input:checked + label {
+    background: linear-gradient(to bottom, #646464, #A2A2A2);
+    color: #ffffff;
+}
+
+.form .contacts {
+    border: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.form .contacts legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 180px;
+}
+
+.form .contacts .phone {
+    font-weight: bold;
+}
+
+.form .fly-to-mars {
+    background: linear-gradient(to top, #A6AECB, #DBC7D6);
+    margin: 30px -20px 0;
+}
+
+.form .fly-to-mars .submit {
+    width: 270px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(160, 160, 165);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+    box-shadow: 1px 5px 5px #3333;
+    margin: 10px 225px 30px;
+}
+
+.form .fly-to-mars .okey {
+    display: inline-block;
+    width: 340px;
+    margin-top: 20px;
+}
+
+.form .fly-to-mars .okey-check {
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+.form .fly-to-mars .okey-set {
+    width: 370px;
+    margin: 0 190px;
+}
+
+.text {
+    width: 180px;
+    float: right;
+}
+
+.text .title {
+    font-size: 16px;
+    margin: 0;
+}

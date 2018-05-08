@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mars Netology</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Заявка на экскурсионный полет на марс</h1>
+    </header>
+
+    <section class="wrap">
+        <section class="form">
+            <form class="request" action="">
+                <div class="general">
+                    <label for="lastname">Фамилия</label>
+                    <input class="lastname" id="lastname" type="text">
+                </div>
+                <div class="general check">
+                    <div class="empty"></div>
+                    <input class="checkbox" id="checkbox" type="checkbox">
+                    <label for="checkbox">ранее менялась</label>
+                </div>
+                <div class="general">
+                    <label for="name">Имя</label>
+                    <input class="name" id="name" type="text">
+                </div>
+                <div class="general">
+                    <label for="firstname">Отчество</label>
+                    <input class="firstname" id="firstname" type="text">
+                </div>
+                <div class="block">
+                    <p class="description">Если вы не хотите лететь в багажном отсеке, пожалуйста, укажите ваше отчество.</p>
+                </div>
+                <div class="general">
+                    <label for="eng-lastname">Фамилия латиницей</label>
+                    <input class="eng-lastname" id="eng-lastname" type="text">
+                </div>
+                <div class="general">
+                    <label for="eng-name">Имя латиницей</label>
+                    <input class="eng-name" id="eng-name" type="text">
+                </div>
+                <div class="general bithday">
+                    <label for="">Дата рождения</label>
+                    <select id="day" name="day">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <select id="month" name="month">
+                        <option>январь</option>
+                        <option>февраль</option>
+                        <option>март</option>
+                        <option>апрель</option>
+                        <option>май</option>
+                    </select>
+                    <select id="year" name="year" onchange="onYearChange(this)">
+                        <option>1920</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                        <option>2004</option>
+                        <option>2005</option>
+                    </select>
+                    <div id="yearTextBlock" class="block not-fly" style="display:none">
+                        <p class="description">
+                            Какой-то текст про то, почему нельзя лететь тем, кому за 90.
+                        </p>
+                    </div>
+                </div>
+                <div class="sex">
+                    <p class="empty">Пол</p>
+                    <ul class="radio-button">
+                        <li>
+                            <input class="male" id="male" name="sex" type="radio" onclick="show1();">
+                            <label for="male">мужской</label>
+                        </li>
+                        <li class="radiobutton">
+                            <input class="female" id="female" name="sex" type="radio" onclick="show2();">
+                            <label for="female">женский</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="general family-status">
+                    <label for="">Семейное положение</label>
+                    <select class="hide-male" id="hide-male">
+                        <option>женат</option>
+                        <option>в "гражданском браке"</option>
+                        <option>холост</option>
+                        <option>разведён</option>
+                        <option>вдовец</option>
+                    </select>
+                    <select class="hide-female" id="hide-female" style="display: none;">
+                        <option>замужем</option>
+                        <option>в "гражданском браке"</option>
+                        <option>не замужем</option>
+                        <option>разведена</option>
+                        <option>вдова</option>
+                    </select>
+                </div>
+                <div class="general education">
+                    <label for="">Образование</label>
+                    <select>
+                        <option>высшее</option>
+                        <option>среднее специальное</option>
+                        <option>среднее</option>
+                        <option>студент</option>
+                    </select>
+                </div>
+                <fieldset class="contacts">
+                    <legend>Контактная информация</legend>
+                    <div class="general number">
+                        <label for="phone">Моб. телефон</label>
+                        <input class="phone" id="phone" type="text" placeholder="+7">
+                    </div>
+                    <div class="general email">
+                        <label for="mail">Электронная почта</label>
+                        <input class="mail" id="mail" type="email">
+                    </div>
+                </fieldset>
+                <div class="general fly-to-mars">
+                    <div class="okey-set">
+                        <input class="okey-check" id="okey-check" type="checkbox" onchange="onCheckboxChange(this);">
+                        <p class="okey">Ставя эту галочку, я подтверждаю, что поставил её в трезвом уме и твёрдой памяти.</p>
+                    </div>
+                    <input class="submit" id="submit" type="submit" value="Полететь на Марс">
+                </div>
+            </form>
+        </section>
+
+        <aside class="text">
+            <h2 class="title">Почему стабильно солнечное затмение?</h2>
+            <p class="paragraf">Эффективный диаметр жизненно вызывает случайный эффективный радиус, а время ожидания ответа составило бы
+                <br>80 миллиардов лет.
+            </p>
+        </aside>
+    </section>
+    <script>
+        function show1() {
+            document.getElementById('hide-female').style.display = 'none';
+            document.getElementById('hide-male').style.display = 'inline-block';
+        }
+
+        function show2() {
+            document.getElementById('hide-male').style.display = 'none';
+            document.getElementById('hide-female').style.display = 'inline-block';
+        }
+
+        function onCheckboxChange(element) {
+            if (element.checked) {
+                document.getElementById('submit').style.color = 'black';
+            } else {
+                document.getElementById('submit').style.color = '#A0A0A5';
+            }
+        }
+
+        function onYearChange(element) {
+            var selectedYear = parseInt(element.value, 10)
+            var currentDate = new Date();
+            var currentYear = currentDate.getFullYear();
+            var age = currentYear - selectedYear;
+            if (age > 90) {
+                document.getElementById("yearTextBlock").style.display = 'block';
+            } else {
+                document.getElementById("yearTextBlock").style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
