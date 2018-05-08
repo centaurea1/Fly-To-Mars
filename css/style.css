@@ -16,7 +16,7 @@ body {
 
 .form {
     width: 740px;
-    background: url('/image/noise.png');
+    background: url("../image/noise.png");
     float: left;
 }
 
